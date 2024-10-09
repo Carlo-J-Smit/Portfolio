@@ -8,6 +8,11 @@ body{
     src: url("Title.ttf");
 }
 
+@font-face {
+    font-family: 'Bio';
+    src: url("bio.ttf");
+}
+
 .background{
     background-image: url(1-SEAMLESS.jpg);
     opacity: 0.01;
@@ -26,7 +31,7 @@ body{
     top: 0%;
     left: 0%;
     background-color: #32323b;
-
+    z-index: 50;
 
 }
 
@@ -85,16 +90,33 @@ body{
 }
 
 .information{
-    position: fixed;
+    position: relative;
     width: 40%;
-    background-color: #e4e3cc;
-    top: 40%;
-    height: 20%;
+    background-color: #ffecda;
+    top: 200px;
+    height: 300px;
     left: 30%;
-    -webkit-box-shadow: 1px 3px 14px 2px #000000; 
-    box-shadow: 1px 3px 14px 2px #000000;
     border-radius: 10px;
-    
-    
+}
 
+.information_body{
+    position: relative;
+    color: #32323b;
+    width: 90%;
+    background-color: #ffecda;
+    height: 20%;
+    left: 5%;
+    text-align: center;
+    font-size: 20px;
+    top: 10%;
+}
+
+.information_title{
+    color: #ff6309;
+    font-family: "Bio";
+    font-size: 60px;
+    text-align: center;
+    position: relative;
+    top: 1%;
+    
 }
