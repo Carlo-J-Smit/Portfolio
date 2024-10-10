@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carlo Smit Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="projects.css">
+    
+</head>
+<body>
+    <nav>
+        <ul class="sidebar">
+            <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e65226"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li> <!--Home-->
+            <li><a href="index.html#About">About</a></li> 
+            <li><a href="index.html#Skills">Skills</a></li>   
+            <li><a href="index.html#Education">Education</a></li>
+            <li><a href="index.html#Experiance">Experiance</a></li> 
+            <li><a href="index.html#Contact">Contact</a></li>
+            <li><a href="projects.html">Projects</a></li>
+        </ul>
+        <ul>
+            <li><a href="index.html">Carlo Smit</a></li> <!--Home-->
+            <li class="hideOnMobile"><a href="index.html#About">About</a></li> <!-- same page-->
+            <li class="hideOnMobile"><a href="index.html#Skills">Skills</a></li>   <!--education experiance skills contact -->
+            <li class="hideOnMobile"><a href="index.html#Education">Education</a></li> <!-- same page-->
+            <li class="hideOnMobile"><a href="index.html#Experiance">Experiance</a></li> <!-- same page-->
+            <li class="hideOnMobile"><a href="index.html#Contact">Contact</a></li> <!-- same page-->
+            <li class="hideOnMobile"><a href="projects.html">Projects</a></li>
+            <li onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="26px" fill="#e65226"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+        </ul>
+    </nav>
+
+    <div class="background"></div>
+        <div class="header">
+            <button class="button button_home">Home</button>
+            <div  class="menu">
+                <div class="menu_bar"></div>
+                <div class="menu_bar"></div>
+                <div class="menu_bar"></div>
+            </div>
+            <div class="title">Carlo Smit</div>
+        </div>
+    <div class="information">
+        <div class="information_title">General Information</div>
+        <div class="information_body">
+            <p>I am a 1st years student at Stellenbosch University, studying towards Bsc in Computer Science with a focal aea in Data Science</p>
+            <p>This page serves as a portfolio to showcase all the projects I have worked on.</p>
+
+
+
+        </div>
+    </div>
+    <div class="footer"></div>
+    
+    <script src="projects.js"></script>
+</body>
+</html>

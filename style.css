@@ -1,18 +1,24 @@
+/*Landing*/
+/**/
 *{
     margin:  0;
     padding: 0;
 }
 
 body{
-    min-height: 100vh;
+    min-height: 600vh;
     background-color: #32323b;
     overflow: scroll;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 nav{
-    background-color: #e4e3cc;
+    background-color: #ffecda;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    z-index: 998;
 }
 
 nav ul{
@@ -21,6 +27,7 @@ nav ul{
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    
 }
 
 nav li{
@@ -54,7 +61,7 @@ nav li:first-child{
     height: 100vh;
     width: 250px;
     z-index: 999;
-    background-color: #e4e3cc;
+    background-color: #ffecda;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
@@ -89,4 +96,124 @@ nav li:first-child{
 @font-face {
     font-family: 'Title';
     src: url("Title.ttf");
+}
+
+
+/*About*/
+/**/
+
+.About{
+    top: 1000px;
+    background-color: #e65226;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    position: relative;
+}
+
+.information{
+    position: relative;
+    width: 40%;
+    background-color: #ffecda;
+    height: 300px;
+    border-radius: 10px;
+    margin: auto;
+}
+
+.information_body{
+    position: relative;
+    color: #32323b;
+    width: 90%;
+    background-color: #ffecda;
+    height: 20%;
+    left: 5%;
+    text-align: center;
+    font-size: 20px;
+    top: 10%;
+}
+
+.information_title{
+    color: #ff6309;
+    font-family: "Bio";
+    font-size: 60px;
+    text-align: center;
+    position: relative;
+    top: 1%;
+    
+}
+
+/*Education*/
+/**/
+
+.Education{
+    top: 1000px;
+    background-color: #26e68c;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    position: relative;
+}
+
+/*Experiance*/
+/**/
+
+.Experiance{
+    top: 1000px;
+    background-color: #26b0e6;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    position: relative;
+}
+
+/*Skills*/
+/**/
+
+.Skills{
+    top: 1000px;
+    background-color: #3926e6;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    position: relative;
+}
+
+/*Contact*/
+/**/
+
+.Contacts{
+    top: 1000px;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    position: relative;
+    margin:  0;
+    padding: 0;
+    background-color: #ffecda;
+}
+
+.contact-Panel{
+    width: 40%;
+    height: 60%;
+    border-radius: 10px;
+    background-color: #ffecda;
+    position: relative;
+    font-size: 16px;
+    left: 5%;
+    top: 20%;
+}
+
+.contact-title {
+    color: #ff6309;
+    font-size: 30px;
+    display: flex;
+    margin-left: 10%; /* Use margin instead of position */
+    margin-top: 10%;
+}
+
+.Contacts li[name="github"], .Contacts li[name="linkedin"] {
+    position: relative; /* Remove the absolute positioning */
+    margin-top: 20%; /* Add some spacing */
+    margin-left: 20% ;
+    marker: none;
 }
