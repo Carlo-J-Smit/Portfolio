@@ -8,7 +8,6 @@ function hideSidebar(){
     sidebar.style.right = "-100%"
 }
 
-// search
 const product = [
     {
         id: 0,
