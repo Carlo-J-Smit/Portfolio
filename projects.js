@@ -12,38 +12,38 @@ const product = [
     {
         id: 0,
         image: 'image/gg-1.jpg',
-        title: 'Z Flip Foldable Mobile',
-        price: 120,
+        title: 'Block Game',
+        category: 'Python',
     },
     {
         id: 1,
         image: 'image/hh-2.jpg',
-        title: 'Air Pods Pro',
-        price: 60,
+        title: 'Bee Simulation',
+        category: 'Python',
     },
     {
         id: 2,
-        image: 'image/ee-3.jpg',
-        title: '250D DSLR Camera',
-        price: 230,
+        image: '',
+        title: '',
+        category: 'none',
     },
     {
         id: 3,
-        image: 'image/aa-1.jpg',
-        title: 'Headphones',
-        price: 100,
+        image: '',
+        title: '',
+        category: 'none',
     },
     {
         id: 4,
-        image: 'image/bb-1.jpg',
-        title: 'Audio Microphone',
-        price: 230,
+        image: '',
+        title: '',
+        category: 'none',
     },
     {
         id: 5,
-        image: 'image/cc-1.jpg',
-        title: 'Smart Watch',
-        price: 100,
+        image: '',
+        title: '',
+        category: 'none',
     },
 ];
 
@@ -60,8 +60,11 @@ document.getElementById('searchBar').addEventListener('keyup', (e) => {
 });
 
 const displayItem = (items) => {
-    document.getElementById('root').innerHTML = items.map((item) => {
-        var { image, title, price } = item;
+    // Filter out items with category set to 'none'
+    const validItems = items.filter(item => item.category !== 'none');
+
+    document.getElementById('root').innerHTML = validItems.map((item) => {
+        var { image, title, category } = item;
         return (
             `<div class='box'>
                 <div class='img-box'>
@@ -69,11 +72,49 @@ const displayItem = (items) => {
                 </div> 
                 <div class='bottom'>
                     <p>${title}</p>
-                    <h2>$ ${price}.00</h2>
-                <button>Add to cart</button>
+                    <h2>${category}</h2>
+                <button>Open</button>
                 </div>
             </div>`
-        )
-    }).join('')
+        );
+    }).join('');
 };
+
+
+
 displayItem(categories);
+
+// dropdown
+
+
+// Dropdown logic
+const dropdowns = document.querySelectorAll(".dropdown");
+
+dropdowns.forEach(dropdown => {
+    const select = dropdown.querySelector(".select");
+    const caret = dropdown.querySelector(".caret");
+    const menu = dropdown.querySelector(".menu");
+    const options = dropdown.querySelectorAll(".menu li");
+    const selected = dropdown.querySelector(".selected");
+
+    select.addEventListener("click", () => {
+        select.classList.toggle('select-clicked');
+        caret.classList.toggle("caret-rotate");
+        menu.classList.toggle('menu-open');
+    });
+
+    // Loop through options and filter products based on the selected category
+    menu.addEventListener('click', (event) => {
+        const selectedCategory = event.target.innerText;
+        selected.innerText = selectedCategory;
+        select.classList.remove('select-clicked');
+        caret.classList.remove('caret-rotate');
+        menu.classList.remove('menu-open');
+        
+        const filteredProducts = selectedCategory === 'All' ? product : product.filter(item => item.category === selectedCategory);
+        displayItem(filteredProducts);
+    });
+});
+
+
+
